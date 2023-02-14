@@ -1,0 +1,5 @@
+This Python code defines a function cloud_compare_ss that takes in two arguments: direct and cc. direct is a string representing a directory path, and cc is a string representing a file path to the CloudCompare executable.
+
+The function creates a directory called 'processed' within the specified direct directory. It then iterates through all files in the direct directory and for each file that has a file extension of ".e57", it calls the CloudCompare executable using subprocess to compute normals, save the file in E57 format, and drop the global shift. The resulting output files are saved in the 'processed' directory.
+
+The code also contains an if statement that checks if this script is being executed as the main program. If it is, it prompts the user to input a directory containing e57 files and sets the cloud_compare variable to the file path of the CloudCompare executable. Finally, it calls the cloud_compare_ss function with the specified directory and CloudCompare executable.
